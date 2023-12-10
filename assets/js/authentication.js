@@ -1,9 +1,6 @@
-
-function scrollToStartSection(){
-    document.getElementById('start_section').scrollIntoView();
-}
-
 //----------------------- sign in - sign up------------
+
+ 
 function checkPassword(pass){
     if(pass.length < 6){
         return false;
@@ -46,8 +43,9 @@ function checkAccount(){
     let _user = document.getElementById("userName_SignIn").value;
     let _pass = document.getElementById("pass_SignIn").value;
     if(localStorage.getItem("user") === _user && localStorage.getItem("pass") === _pass){
-         window.location.href("http://127.0.0.1:5500/index.html",true);
+        window.location.assign("http://127.0.0.1:5500/index.html");
         alert("Bạn đã đăng nhập thành công!");
+      
        return;
     }
     else{
@@ -55,5 +53,3 @@ function checkAccount(){
         return
     }
 }
-
-
